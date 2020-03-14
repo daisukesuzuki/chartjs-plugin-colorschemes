@@ -83,7 +83,8 @@ var ColorSchemesPlugin = {
 				case 'line':
 				case 'radar':
 				case 'scatter':
-					if (typeof dataset.backgroundColor === 'undefined' || override) {
+				case 'bubble':
+						if (typeof dataset.backgroundColor === 'undefined' || override) {
 						dataset[EXPANDO_KEY].backgroundColor = dataset.backgroundColor;
 						dataset.backgroundColor = helpers.color(color).alpha(fillAlpha).rgbString();
 					}
